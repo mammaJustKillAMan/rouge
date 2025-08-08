@@ -10,6 +10,18 @@ class Shapes:
         self.color = color
         self.size = size
 
+        self.pen = turtle.Turtle()
+        self.pen.speed(5)
+
+    def draw(self):
+        pass
+
+    def area(self):
+        pass
+
+
+
+
     screen = turtle.Screen()
     screen.title("Your turtle shapes")
     turtle.shape("turtle")
