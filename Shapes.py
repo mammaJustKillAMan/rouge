@@ -94,9 +94,6 @@ class Hexagon(Shapes):
 
 
 
-    screen = turtle.Screen()
-    screen.title("Your turtle shapes")
-    turtle.shape("turtle")
-    pen = turtle.Turtle()
-    pen.speed(0)
-
+screen = turtle.Screen()
+screen.title("Your turtle shapes")
+turtle.shape("turtle")
