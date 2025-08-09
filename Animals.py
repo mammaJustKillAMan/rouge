@@ -4,6 +4,7 @@ import csv
 def str_to_bool(s):
     return s.strip().lower() in ("yes", "true", "t", "1")
 
+#def for loading csv to dictionary
 def load_animals(filename):
     animals = {}
     with open(filename, 'r') as csv_file:
