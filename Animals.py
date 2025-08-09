@@ -10,6 +10,22 @@ def str_to_bool(s):
     else:
         raise ValueError("invalid boolean value")
 
+#def to change class type from numbers to names
+def class_type_to_name(class_type):
+    no = float(class_type)
+    if no == 1:
+        return "Mammal"
+    elif no == 2:
+        return "Bird"
+    elif no == 3:
+        return "Reptile"
+    elif no == 4:
+        return "Fish"
+    elif no == 5:
+        return "Amphibian"
+    elif no == 6:
+        return "Bug/Invertebrate"
+
 #def for loading csv to dictionary
 def load_animals(filename):
     animals = {}
