@@ -45,7 +45,7 @@ class Triangle(Shapes):
         self.pen.end_fill()
 
     def area(self):
-        return math.sqrt(3 / 4) * pow(self.size)
+        return (math.sqrt(3) / 4) * (self.size ** 2)
 
 class Rectangle(Shapes):
     def draw(self):
