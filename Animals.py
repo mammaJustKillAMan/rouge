@@ -36,6 +36,8 @@ def load_animals(filename):
                 #other than few values the rest is boolean
                 if key != 'animal_name' and key != 'fins' and key != 'legs' and key != 'class_type':
                     line[key] = str_to_bool(line[key])
+                if key == 'class_type':
+                    line[key] = class_type_to_name(line[key])
             animals[line['animal_name']]=line
     return animals
 
