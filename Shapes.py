@@ -97,3 +97,42 @@ class Hexagon(Shapes):
 screen = turtle.Screen()
 screen.title("Your turtle shapes")
 turtle.shape("turtle")
+
+if __name__ == "__main__":
+    shapes = Shapes()
+
+    while True:
+        print("\n--- DRAWING MENU ---")
+        print("1. Circle")
+        print("2. Triangle")
+        print("3. Rectangle")
+        print("4. Pentagon")
+        print("5. Hexagon")
+        print("6. Exit")
+
+        choice = input("Enter your choice: ")
+        x_axis = input("Enter starting point at x axis: ")
+        y_axis = input("Enter starting point at y axis: ")
+        color = input("Enter shape color: ")
+        size = input("Enter size of shape: ")
+
+        if choice == "1":
+            Circle(x_axis, y_axis, color, size)
+            shapes.draw()
+        elif choice == "2":
+            Triangle(x_axis, y_axis, color, size)
+            shapes.draw()
+        elif choice == "3":
+            Rectangle(x_axis, y_axis, color, size)
+            shapes.draw()
+        elif choice == "4":
+            Pentagon(x_axis, y_axis, color, size)
+            shapes.draw()
+        elif choice == "5":
+            Hexagon(x_axis, y_axis, color, size)
+            shapes.draw()
+        elif choice == "6":
+            print("Thank you for playing!")
+            break
+        else:
+            print("Invalid choice!")
