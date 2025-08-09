@@ -72,7 +72,7 @@ class Pentagon(Shapes):
         self.pen.begin_fill()
         for _ in range(5):
             self.pen.forward(self.size)
-            self.pen.right(108)
+            self.pen.right(72)
         self.pen.end_fill()
 
     def area(self):
