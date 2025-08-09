@@ -116,7 +116,9 @@ def get_color(prompt):
 
 
 if __name__ == "__main__":
-    shapes = Shapes()
+    screen = turtle.Screen()
+    screen.title("Your turtle shapes")
+    turtle.shape("turtle")
 
     while True:
         print("\n--- DRAWING MENU ---")
