@@ -129,6 +129,7 @@ if __name__ == "__main__":
         print("4. Pentagon")
         print("5. Hexagon")
         print("6. Exit")
+        print("7. Color manu")
 
         choice = input("Enter your choice: ")
         x_axis = input("Enter starting point at x axis: ")
