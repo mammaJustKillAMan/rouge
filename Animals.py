@@ -44,3 +44,55 @@ def load_animals(filename):
 #load csv
 zoo_dict = load_animals("zoo.csv")
 
+#try/except to make sure user inputs a yes or no
+def get_bool(prompt):
+    while True:
+        try:
+            return str_to_bool(input(prompt))
+        except ValueError:
+            print("Please enter yes or no")
+
+#try/except to make sure user inputs a number
+def get_number(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Please enter a number")
+
+#game to find the animal one is thinking about
+def quiz_game():
+    print("---ANSWER YES, NO OR WITH SPECIFIC NUMBER---")
+    print("Think of an animal and answer the questions")
+
+    answers = {
+        'hair': get_bool("Does the animal have hair? "),
+        'feathers': get_bool("Does the animal have feathers? "),
+        'eggs': get_bool("Does the animal lay eggs? "),
+        'milk': get_bool("Does the animal give milk? "),
+        'airborne': get_bool("Is the animal airborne? "),
+        'aquatic': get_bool("Is the animal aquatic? "),
+        'predator': get_bool("Is the animal a predator? "),
+        'toothed': get_bool("Is the animal toothed? "),
+        'backbone': get_bool("Does the animal have a backbone? "),
+        'breathes': get_bool("Does the animal breathe? "),
+        'venomous': get_bool("Is the animal venomous? "),
+        'fins': get_number("How many fins does the animal have? "),
+        'legs': get_number("How many legs does the animal have? "),
+        'tail': get_bool("Does the animal have a tail? "),
+        'domestic': get_bool("Is the animal domestic? "),
+        'catsize': get_bool("Is the animal cat-sized? ")
+    }
+
+    #filter the animals
+    possible_animals = [
+        animal for animal in zoo_dict
+        if all(animal[key] == value for key, value in answers.items())
+    ]
+
+    if possible_animals:
+        print("Possible match:")
+        for animal in possible_animals:
+            print(f"- {animal['animal_name']} ({animal['class_type']})")
+    else:
+        print("No match found")
