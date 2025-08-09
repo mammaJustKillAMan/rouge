@@ -1,5 +1,6 @@
 import csv
 
+#def to change 1 and 0 to boolean values
 def str_to_bool(s):
     return s.strip().lower() in ("yes", "true", "t", "1")
 
