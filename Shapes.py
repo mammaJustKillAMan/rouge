@@ -132,10 +132,17 @@ if __name__ == "__main__":
         print("7. Color manu")
 
         choice = input("Enter your choice: ")
-        x_axis = input("Enter starting point at x axis: ")
-        y_axis = input("Enter starting point at y axis: ")
-        color = input("Enter shape color: ")
-        size = input("Enter size of shape: ")
+
+        if choice == "6":
+            print("Thank you for playing!")
+            break
+        elif choice == "7":
+            webbrowser.open("https://www.w3schools.com/colors/colors_names.asp")
+
+        x_axis = get_number("Enter starting point at x axis: ", -400, 400)
+        y_axis = get_number("Enter starting point at y axis: ", -300, 300)
+        color = get_color("Enter shape color: ")
+        size = get_number("Enter size of shape: ", 1, 400)
 
         if choice == "1":
             Circle(x_axis, y_axis, color, size)
