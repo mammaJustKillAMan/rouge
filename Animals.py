@@ -17,5 +17,6 @@ def load_animals(filename):
             animals[line['animal_name']]=line
     return animals
 
+#load csv
 zoo_dict = load_animals("zoo.csv")
 
