@@ -151,8 +151,7 @@ if __name__ == "__main__":
         elif choice == "3":
             shape = Square(x_axis, y_axis, color, size)
         elif choice == "4":
-            Pentagon(x_axis, y_axis, color, size)
-            shapes.draw()
+            shape = Pentagon(x_axis, y_axis, color, size)
         elif choice == "5":
             Hexagon(x_axis, y_axis, color, size)
             shapes.draw()
