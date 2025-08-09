@@ -3,7 +3,6 @@ import turtle
 
 
 class Shapes:
-    import turtle
 
     def __init__(self, x_axis, y_axis, color, size):
         self.x_axis = x_axis
