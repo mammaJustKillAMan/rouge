@@ -153,10 +153,6 @@ if __name__ == "__main__":
         elif choice == "4":
             shape = Pentagon(x_axis, y_axis, color, size)
         elif choice == "5":
-            Hexagon(x_axis, y_axis, color, size)
-            shapes.draw()
-        elif choice == "6":
-            print("Thank you for playing!")
-            break
+            shape = Hexagon(x_axis, y_axis, color, size)
         else:
             print("Invalid choice!")
