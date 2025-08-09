@@ -94,9 +94,26 @@ class Hexagon(Shapes):
 
 
 
-screen = turtle.Screen()
-screen.title("Your turtle shapes")
-turtle.shape("turtle")
+def get_number(prompt, min_value, max_value):
+    while True:
+        try:
+            value = float(input(prompt))
+            if min_value <= value <= max_value:
+                return value
+            else:
+                print("Please enter a number between {min_val} and {max_val}")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+def get_color(prompt):
+    while True:
+        try:
+            color = input(prompt)
+            turtle.Turtle().color(color)
+            return color
+        except ValueError:
+            print("Invalid input. Please enter a color.")
+
 
 if __name__ == "__main__":
     shapes = Shapes()
