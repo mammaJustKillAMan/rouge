@@ -145,8 +145,7 @@ if __name__ == "__main__":
         size = get_number("Enter size of shape: ", 1, 400)
 
         if choice == "1":
-            Circle(x_axis, y_axis, color, size)
-            shapes.draw()
+            shape = Circle(x_axis, y_axis, color, size)
         elif choice == "2":
             Triangle(x_axis, y_axis, color, size)
             shapes.draw()
