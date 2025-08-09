@@ -147,8 +147,7 @@ if __name__ == "__main__":
         if choice == "1":
             shape = Circle(x_axis, y_axis, color, size)
         elif choice == "2":
-            Triangle(x_axis, y_axis, color, size)
-            shapes.draw()
+            shape = Triangle(x_axis, y_axis, color, size)
         elif choice == "3":
             Rectangle(x_axis, y_axis, color, size)
             shapes.draw()
