@@ -47,7 +47,7 @@ class Triangle(Shapes):
     def area(self):
         return (math.sqrt(3) / 4) * (self.size ** 2)
 
-class Rectangle(Shapes):
+class Square(Shapes):
     def draw(self):
         self.pen.penup()
         self.pen.goto(self.x_axis, self.y_axis)
