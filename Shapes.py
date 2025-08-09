@@ -149,8 +149,7 @@ if __name__ == "__main__":
         elif choice == "2":
             shape = Triangle(x_axis, y_axis, color, size)
         elif choice == "3":
-            Rectangle(x_axis, y_axis, color, size)
-            shapes.draw()
+            shape = Square(x_axis, y_axis, color, size)
         elif choice == "4":
             Pentagon(x_axis, y_axis, color, size)
             shapes.draw()
