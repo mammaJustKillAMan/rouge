@@ -156,3 +156,9 @@ if __name__ == "__main__":
             shape = Hexagon(x_axis, y_axis, color, size)
         else:
             print("Invalid choice!")
+            continue
+
+        shape.draw()
+        print(f"Area of the shape: {shape.area():.2f}")
+
+turtle.done()
