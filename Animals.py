@@ -96,3 +96,33 @@ def quiz_game():
             print(f"- {animal['animal_name']} ({animal['class_type']})")
     else:
         print("No match found")
+
+#def for calculating statistics based on traits
+def trait_stat():
+    print("---CHOOSE IMPORTANT TRAITS FOR STATISTICS---")
+    print("Write down what features/properties do the animals have")
+    print("Choose from: hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,tail,domestic,catsize")
+    traits_input = input("Enter traits separated by commas (or 'no' if none): ").strip().lower()
+    traits = None if traits_input == "no" else [t.strip() for t in traits_input.split(",")]
+
+    fin_leg_input = input("Enter number of fins or legs (or 'no' if irrelevant): ").strip().lower()
+    fin_leg = None if fin_leg_input == "no" else int(fin_leg_input)
+
+    class_input = input("Enter class type (or 'no' if irrelevant): ").strip().lower()
+    class_type = None if class_input == "no" else class_input
+
+    #filter the animals, the validation of the inputs other than expected was set aside for the future
+    possible_animals = []
+    for data in zoo_dict.values():
+        if traits and not all(data.get(trait) is True for trait in traits):
+            continue
+        if fin_leg is not None and not (data['fins'] == fin_leg or data['legs'] == fin_leg):
+            continue
+        if class_type and data['class_type'].lower() != class_type:
+            continue
+        possible_animals.append(data)
+
+    if possible_animals:
+        print(f"Possible matches: {len(possible_animals)}")
+
+
