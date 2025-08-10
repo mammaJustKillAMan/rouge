@@ -134,6 +134,7 @@ if __name__ == "__main__":
         choice = input("Enter your choice: ")
 
         if choice == "3":
+            print("BYE!")
             break
         elif choice == "1":
             quiz_game()
