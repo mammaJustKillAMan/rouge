@@ -86,8 +86,8 @@ def quiz_game():
 
     #filter the animals
     possible_animals = [
-        animal for animal in zoo_dict
-        if all(animal[key] == value for key, value in answers.items())
+        data for name, data in zoo_dict.items()
+        if all(data[key] == value for key, value in answers.items())
     ]
 
     if possible_animals:
