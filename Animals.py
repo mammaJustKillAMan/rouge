@@ -125,4 +125,20 @@ def trait_stat():
     if possible_animals:
         print(f"Possible matches: {len(possible_animals)}")
 
+if __name__ == "__main__":
+    while True:
+        print("---ANOTHER MENU---")
+        print("1. Guessing game")
+        print("2. Statistics")
+        print("3. Exit")
+        choice = input("Enter your choice: ")
 
+        if choice == "3":
+            break
+        elif choice == "1":
+            quiz_game()
+        elif choice == "2":
+            trait_stat()
+        else:
+            print('Invalid choice')
+            continue
